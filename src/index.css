@@ -5,9 +5,88 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.grid p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.grid__box{
+  width: 15%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+.grid__box__content{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border:1px solid #ccc;
+  overflow: hidden;
+  
+}
+.grid__box__image img{
+  width: 100%;
+  height: auto;
+}
+.grid__box__image{
+  width: 100%;
+  overflow: hidden;
+}
+.grid__box__title{
+  padding: 15px;
+ 
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  
+  
+}
+.spinner .path {
+  stroke: #93bfec;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
 }
